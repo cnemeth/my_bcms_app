@@ -6,12 +6,6 @@ gem "browsercms", "3.3.1"
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-group :production do
-  gem 'heroku'
-  gem 'pg'
-  gem 'dalli'
-end
-
 # Use unicorn as the web server
 # gem 'unicorn'
 
