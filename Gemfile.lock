@@ -34,6 +34,7 @@ GEM
       rails (~> 3.0.7)
       term-ansicolor
     builder (2.1.2)
+    dalli (1.1.1)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     heroku (2.6.1)
@@ -88,6 +89,7 @@ PLATFORMS
 
 DEPENDENCIES
   browsercms (= 3.3.1)
+  dalli
   heroku
   pg
   rails (= 3.0.10)
