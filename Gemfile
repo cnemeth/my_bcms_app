@@ -1,17 +1,16 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.10'
+gem "browsercms", "3.3.1" 
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-group :development do
-  gem 'sqlite3'
+group :production do
+  gem 'heroku'
+  gem 'pg'
+  gem 'dalli'
 end
-
-gem 'heroku'
-gem 'pg'
-gem 'dalli'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -23,6 +22,12 @@ gem 'dalli'
 # gem 'ruby-debug'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
+group :production do
+  gem 'heroku'
+  gem 'pg'
+  gem 'dalli'
+end
+ 
 # Bundle the extra gems:
 # gem 'bj'
 # gem 'nokogiri'
@@ -32,7 +37,7 @@ gem 'dalli'
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
-# group :development, :test do
-#   gem 'webrat'
-# end
-gem "browsercms", "3.3.1"
+group :development, :test do
+#  gem 'webrat'
+  gem 'sqlite3'
+end
