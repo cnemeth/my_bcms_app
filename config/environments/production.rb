@@ -3,6 +3,9 @@ Bcmsheroku::Application.configure do
   config.action_controller.page_cache_directory = Rails.root + '/public/cache/'
   # Settings specified here will take precedence over those in config/application.rb
 
+  # Test this setting
+  config.perform_caching = true
+
   # The production environment is meant for finished, "live" apps.
   # Code is not reloaded between requests
   config.cache_classes = true
