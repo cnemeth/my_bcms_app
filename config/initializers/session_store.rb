@@ -15,4 +15,4 @@ ActionController::Base.session = {
 } 
 
 # require 'action_controller/session/dalli_store' 
-ActionController::Base.session_store = :dalli_store 
+# ActionController::Base.session_store = :dalli_store 
