@@ -35,4 +35,5 @@ gem 'feedzirra'
 group :development, :test do
 #  gem 'webrat'
   gem 'sqlite3'
+  gem 'pry'
 end

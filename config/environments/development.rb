@@ -24,5 +24,9 @@ Bcmsheroku::Application.configure do
   config.action_dispatch.best_standards_support = :builtin
 end
 
+silence_warnings do
+  require 'pry'
+  IRB = Pry
+end
 
 SITE_DOMAIN="localhost:3000"
