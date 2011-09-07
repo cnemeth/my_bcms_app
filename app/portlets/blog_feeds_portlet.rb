@@ -3,7 +3,7 @@ require 'feedzirra'
 class BlogFeedsPortlet < Portlet
 
   # Mark this as 'true' to allow the portlet's template to be editable via the CMS admin UI.
-  enable_template_editor false
+  enable_template_editor true 
      
   def render
     # Your Code Goes Here
@@ -32,7 +32,8 @@ private
   end
 
   def sort_by_publish_date(entries)
-    entries.sort{|a,b| b.published <=> a.published}
+   # entries.sort{|a,b| b.published <=> a.published}
+   entries
   end
 
 end
