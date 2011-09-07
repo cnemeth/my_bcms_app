@@ -1,0 +1,10 @@
+<h1>Blog Entries</h1>
+
+<% @entries.each do | e | %> 
+  <h3><%= e.title %></h3>
+  <p><%= e.author %></p> 
+  <p><%= e.summary unless e.content != nil %></p>
+  <p><%= e.content %></p>    
+  <p><%= e.published %></p> 
+  <hr />
+<% end %>       
