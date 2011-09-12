@@ -23,7 +23,7 @@ private
   def sanitize_and_interleave(feeds)
     entries = []
     feeds.each do | key, value |
-      #value.sanitize_entries!
+      value.sanitize_entries!
       value.entries.each do | e |
         entries << e
       end
