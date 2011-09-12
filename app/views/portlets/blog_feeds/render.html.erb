@@ -1,6 +1,6 @@
 <% @entries.each do | e | %> 
   <h3><%= e.title %></h3>
-  <p><%= e.author %> <%= e.published %></p> 
+  <p><%= e.author %>&nbsp;&nbsp;&nbsp;<%= e.published %></p> 
   <p><%= e.summary unless e.content != nil %></p>
   <p><%= e.content %></p>    
   <hr />

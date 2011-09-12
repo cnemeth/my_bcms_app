@@ -3,7 +3,7 @@ require 'feedzirra'
 class BlogFeedsPortlet < Portlet
 
   # Mark this as 'true' to allow the portlet's template to be editable via the CMS admin UI.
-  enable_template_editor true 
+  enable_template_editor false
      
   def render
     # Your Code Goes Here
@@ -23,7 +23,7 @@ private
   def sanitize_and_interleave(feeds)
     entries = []
     feeds.each do | key, value |
-      value.sanitize_entries!
+      #value.sanitize_entries!
       value.entries.each do | e |
         entries << e
       end
