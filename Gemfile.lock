@@ -1,3 +1,16 @@
+GIT
+  remote: git://github.com/pauldix/feedzirra.git
+  revision: ba4348855f5975e6a5474de55720c17fcd4f5ebe
+  tag: v0.0.24
+  specs:
+    feedzirra (0.0.24)
+      activesupport (>= 2.3.8)
+      builder (>= 2.1.2)
+      curb (>= 0.2.3)
+      loofah (>= 0.3.1)
+      nokogiri (> 0.0.0)
+      sax-machine (>= 0.0.12)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -36,17 +49,10 @@ GEM
     builder (2.1.2)
     coderay (0.9.8)
     curb (0.7.15)
-    dalli (1.1.1)
+    dalli (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
-    feedzirra (0.0.24)
-      activesupport (>= 2.3.8)
-      builder (>= 2.1.2)
-      curb (>= 0.2.3)
-      loofah (>= 0.3.1)
-      nokogiri (> 0.0.0)
-      sax-machine (>= 0.0.12)
-    heroku (2.6.1)
+    heroku (2.7.0)
       launchy (>= 0.3.2)
       rest-client (~> 1.6.1)
       rubyzip
@@ -67,11 +73,11 @@ GEM
     nokogiri (1.5.0)
     pg (0.11.0)
     polyglot (0.3.2)
-    pry (0.9.3)
+    pry (0.9.5)
       coderay (>= 0.9.8)
-      method_source (>= 0.6.0)
+      method_source (>= 0.6.5)
       ruby_parser (>= 2.0.5)
-      slop (~> 1.9.0)
+      slop (~> 2.1.0)
     rack (1.2.3)
     rack-mount (0.6.14)
       rack (>= 1.0.0)
@@ -101,7 +107,7 @@ GEM
     sax-machine (0.0.20)
       nokogiri (> 0.0.0)
     sexp_processor (3.0.6)
-    slop (1.9.1)
+    slop (2.1.0)
     sqlite3 (1.3.4)
     term-ansicolor (1.0.6)
     thor (0.14.6)
@@ -116,7 +122,7 @@ PLATFORMS
 DEPENDENCIES
   browsercms (= 3.3.1)
   dalli
-  feedzirra
+  feedzirra!
   heroku
   pg
   pry
