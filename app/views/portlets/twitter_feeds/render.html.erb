@@ -1,8 +1,8 @@
 <div id="tweets"></div>
-<script>
-(function () {
-var t = hedgeye.twitter;
-var url = t.listStatusesURL({list_id: t.config.listId, per_page: 8});
-jQuery(document).ready(t.ready({jsonpURLs: [url]}));
-})();
-</script>
+<% javascript_tag do %>
+  jQuery(function($){
+    var t = hedgeye.twitter;
+    var url = t.listStatusesURL({list_id: t.config.listId, per_page: 8});
+    jQuery(document).ready(t.ready({jsonpURLs: [url]}));
+  });
+<% end %>
