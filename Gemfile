@@ -27,7 +27,7 @@ end
 # gem 'nokogiri'
 # gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'aws-s3', :require => 'aws/s3'
-gem 'feedzirra', :git => "git://github.com/pauldix/feedzirra.git", :tag => "v0.0.24"
+gem 'feedzirra', :git => "git://github.com/cnemeth/feedzirra.git"
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators

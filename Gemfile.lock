@@ -1,15 +1,17 @@
 GIT
-  remote: git://github.com/pauldix/feedzirra.git
-  revision: ba4348855f5975e6a5474de55720c17fcd4f5ebe
-  tag: v0.0.24
+  remote: git://github.com/cnemeth/feedzirra.git
+  revision: 1715a1e84a34033b15cdea55ff4411298f53eb1b
   specs:
-    feedzirra (0.0.24)
-      activesupport (>= 2.3.8)
-      builder (>= 2.1.2)
-      curb (>= 0.2.3)
-      loofah (>= 0.3.1)
-      nokogiri (> 0.0.0)
-      sax-machine (>= 0.0.12)
+    feedzirra (0.0.31)
+      activesupport (>= 3.0.8)
+      builder (~> 2.1.2)
+      curb (~> 0.7.15)
+      i18n (>= 0.5.0)
+      loofah (~> 1.0.0)
+      nokogiri (~> 1.4.4)
+      rake (>= 0.9.2)
+      rdoc (~> 3.8)
+      sax-machine (~> 0.0.20)
 
 GEM
   remote: http://rubygems.org/
@@ -60,8 +62,8 @@ GEM
     i18n (0.5.0)
     launchy (2.0.5)
       addressable (~> 2.2.6)
-    loofah (1.2.0)
-      nokogiri (>= 1.4.4)
+    loofah (1.0.0)
+      nokogiri (>= 1.3.3)
     mail (2.2.19)
       activesupport (>= 2.3.6)
       i18n (>= 0.4.0)
@@ -70,7 +72,7 @@ GEM
     method_source (0.6.5)
       ruby_parser (>= 2.0.5)
     mime-types (1.16)
-    nokogiri (1.5.0)
+    nokogiri (1.4.7)
     pg (0.11.0)
     polyglot (0.3.2)
     pry (0.9.5)
