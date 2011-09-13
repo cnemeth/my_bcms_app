@@ -22,13 +22,15 @@ private
 
   def sanitize_and_interleave(feeds)
     entries = []
-    feeds.each do | key, value |
-      value.sanitize_entries!
-      value.entries.each do | e |
-        entries << e
-      end
-    end  
-    sort_by_publish_date(entries)
+    if feeds != nil
+      feeds.each do | key, value |
+        value.sanitize_entries! 
+        value.entries.each do | e |
+          entries << e
+        end
+      end  
+      sort_by_publish_date(entries)
+    end
   end
 
   def sort_by_publish_date(entries)
