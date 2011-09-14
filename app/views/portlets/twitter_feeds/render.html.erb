@@ -1,5 +1,7 @@
 <div id="tweets"></div>
-<% javascript_tag do %>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<%= javascript_include_tag "application.js" %>
+<%= javascript_tag do %>
   jQuery(function($){
     var t = hedgeye.twitter;
     var url = t.listStatusesURL({list_id: t.config.listId, per_page: 8});

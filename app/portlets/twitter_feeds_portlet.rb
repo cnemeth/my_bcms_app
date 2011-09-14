@@ -5,9 +5,6 @@ class TwitterFeedsPortlet < Portlet
      
   def render
     # Your Code Goes Here
-    respond_to do |format|
-      format.html { render "app/views/portlets/twitter_feeds/render.html.erb" }
-    end
   end
     
 end
