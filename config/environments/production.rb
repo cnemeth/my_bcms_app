@@ -40,6 +40,20 @@ Bcmsheroku::Application.configure do
   # Enable email delivery errors
   config.action_mailer.raise_delivery_errors = true
 
+  # Configure smtp connection
+  config.action_mailer.delivery_method = :smtp
+
+  # Configure ActionMaler
+  ActionMailer::Base.smtp_settings = {
+   :address =>        "smtp.mse23.exchange.ms",
+   :port =>           25,
+   :domain =>         "hedgeye.com",
+   :authentication => :login,
+   :user_name =>      "cruisecontrol",
+   :password =>       "theedge!23"
+  }
+
+
   # Enable threaded mode
   # config.threadsafe!
 
