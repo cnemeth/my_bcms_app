@@ -1,5 +1,7 @@
 Bcmsheroku::Application.routes.draw do
 
+  routes_for_bcms_news
+
   routes_for_browser_cms
 
   # The priority is based upon order of creation:
