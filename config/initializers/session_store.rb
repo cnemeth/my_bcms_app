@@ -9,10 +9,10 @@
 # Bcmsheroku::Application.config.session_store :active_record_store
 
 # Session cache
-ActionController::Base.session = { 
-  :namespace   => '_dalli-rails2_session', 
-  :secret => 'zVf235OHcyvjtMcxImSeO8S4JmIpR67CDXPcoj1L' 
-} 
+# ActionController::Base.session = { 
+#  :namespace   => '_dalli-rails2_session', 
+#  :secret => 'zVf235OHcyvjtMcxImSeO8S4JmIpR67CDXPcoj1L' 
+#} 
 
 # require 'action_controller/session/dalli_store' 
 # ActionController::Base.session_store = :dalli_store 
