@@ -1,10 +1,13 @@
 Feature: Blog Aggregation Description
 
-  In order to display blog feeds of memebers of the engineering group
+  In order to display blog feeds of members of the engineering group
   As a developer
   I want to aggregate their blog feeds
 
   Scenario: Successful aggregation
-    Given an array of blog feeds
+    Given an array of feed urls
     When I make a call to the Feedzirra gem fetch and parse method
-    Then I should have the entries contained in the blog feeds
+    Then I should have the blog feeds contained in entries
+    And I should see the interleaved entries of the feeds displayed in reverse chronological order
+
+
