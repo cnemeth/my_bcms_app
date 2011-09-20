@@ -9,5 +9,3 @@ Feature: Blog Aggregation Description
     When I make a call to the Feedzirra gem fetch and parse method
     Then I should have the blog feeds contained in entries
     And I should see the interleaved entries of the feeds displayed in reverse chronological order
-
-

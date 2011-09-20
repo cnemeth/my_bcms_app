@@ -36,5 +36,4 @@ private
   def sort_by_publish_date(entries)
    entries.sort{ |a,b| b.published <=> a.published }
   end
-
 end
