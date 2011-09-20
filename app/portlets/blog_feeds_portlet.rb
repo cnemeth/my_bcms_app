@@ -5,16 +5,18 @@ class BlogFeedsPortlet < Portlet
   # Mark this as 'true' to allow the portlet's template to be editable via the CMS admin UI.
   enable_template_editor false
      
-  def render
-    # Your Code Goes Here
-    feed_urls = [
+  attr_reader :feed_urls
+
+   FEED_URLS = [
     "http://feeds.feedburner.com/BenjaminOakes",
     "http://diegoscataglini.com/feed",
     "http://feeds.feedburner.com/PuttingTheFunIntoFunkworks",
     "http://oldfartdeveloper.blogspot.com/feeds/posts/default?alt=rss"
-    ] 
+  ]  
 
-    @entries = sanitize_and_interleave( Feedzirra::Feed.fetch_and_parse(feed_urls) )
+  def render
+    # Your Code Goes Here
+    @entries = sanitize_and_interleave( Feedzirra::Feed.fetch_and_parse(FEED_URLS) )
 
   end
     
