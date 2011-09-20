@@ -2,7 +2,7 @@ Given /^an array of feed urls$/ do
   @bp = BlogFeedsPortlet.new
 end
 
-When /^I make a call to the Feedzirra gem fetch and parse method$/ do
+When /^I make a call to the BlogFeedsPortlet\.render method$/ do
   @entries = @bp.render
 end
 
