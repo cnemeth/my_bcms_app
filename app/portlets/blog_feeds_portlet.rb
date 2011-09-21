@@ -22,11 +22,10 @@ private
   def sanitize_and_interleave(feeds)
     entries = []
     feeds.each do | key, value |
-      # Need to deel with 
+      # Add check for
       # ERROR: undefined method `sanitize_entries!' for 0:Fixnum
-      # This happens, for example, om network outage
+      # This happens, for example, on network outage
       next unless value.is_a?(Feedzirra::Parser::RSS) || value.is_a?(Feedzirra::Parser::AtomFeedBurner)
-      # puts value.class
       value.sanitize_entries!
       value.entries.each do | e |
         entries << e
