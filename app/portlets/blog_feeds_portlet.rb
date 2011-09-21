@@ -4,10 +4,8 @@ class BlogFeedsPortlet < Portlet
 
   # Mark this as 'true' to allow the portlet's template to be editable via the CMS admin UI.
   enable_template_editor false
-     
-  attr_reader :feed_urls
-
-   FEED_URLS = [
+   
+  FEED_URLS = [
     "http://feeds.feedburner.com/BenjaminOakes",
     "http://diegoscataglini.com/feed",
     "http://feeds.feedburner.com/PuttingTheFunIntoFunkworks",
@@ -17,22 +15,24 @@ class BlogFeedsPortlet < Portlet
   def render
     # Your Code Goes Here
     @entries = sanitize_and_interleave( Feedzirra::Feed.fetch_and_parse(FEED_URLS) )
-
   end
     
 private
 
   def sanitize_and_interleave(feeds)
     entries = []
-    if feeds != nil
-      feeds.each do | key, value |
-        value.sanitize_entries! 
-        value.entries.each do | e |
-          entries << e
-        end
-      end  
-      sort_by_publish_date(entries)
-    end
+    feeds.each do | key, value |
+      # Need to deel with 
+      # ERROR: undefined method `sanitize_entries!' for 0:Fixnum
+      # This happens, for example, om network outage
+      next unless value.is_a?(Feedzirra::Parser::RSS) || value.is_a?(Feedzirra::Parser::AtomFeedBurner)
+      # puts value.class
+      value.sanitize_entries!
+      value.entries.each do | e |
+        entries << e
+      end
+    end  
+    sort_by_publish_date(entries)
   end
 
   def sort_by_publish_date(entries)

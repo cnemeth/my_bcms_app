@@ -1,22 +1,17 @@
-Given /^an array of feed urls$/ do
+Given /^the blog feeds of the engineers$/ do
   @bp = BlogFeedsPortlet.new
-end
-
-When /^I make a call to the BlogFeedsPortlet\.render method$/ do
   @entries = @bp.render
 end
 
-Then /^I should have the blog feeds contained in entries$/ do
-  @entries.should_not be nil
-  @entries.is_a?(Fixnum).should be false
-  @entries.count.should > 0
+When /^I go to the blog feeds page$/ do
+  
 end
 
-Then /^I should see the interleaved entries of the feeds displayed in reverse chronological order$/ do
+Then /^I should see the interleaved blog entries of the feeds displayed in reverse chronological order$/ do
+  pending # express the regexp above with the code you wish you had
   0.upto(@entries.count - 2) do | offset |
-      latest_entry = @entries[offset]
-      previous_entry = @entries[offset + 1]
-      latest_entry.published.should >= previous_entry.published
+    latest_entry = @entries[offset]
+    previous_entry = @entries[offset + 1]
+    latest_entry.published.should >= previous_entry.published
   end
 end
-
