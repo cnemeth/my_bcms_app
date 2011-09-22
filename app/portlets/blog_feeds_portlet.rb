@@ -4,16 +4,18 @@ class BlogFeedsPortlet < Portlet
 
   # Mark this as 'true' to allow the portlet's template to be editable via the CMS admin UI.
   enable_template_editor false
-   
-  FEED_URLS = [
-    "http://feeds.feedburner.com/BenjaminOakes",
-    "http://diegoscataglini.com/feed",
-    "http://feeds.feedburner.com/PuttingTheFunIntoFunkworks",
-    "http://oldfartdeveloper.blogspot.com/feeds/posts/default?alt=rss"
-  ]  
-
+  
   def render
-    @entries = sanitize_and_interleave( Feedzirra::Feed.fetch_and_parse(FEED_URLS) )
+    
+   feed_urls = [
+      "http://feeds.feedburner.com/BenjaminOakes",
+      "http://diegoscataglini.com/feed",
+      "http://feeds.feedburner.com/PuttingTheFunIntoFunkworks",
+      "http://oldfartdeveloper.blogspot.com/feeds/posts/default?alt=rss"
+    ]  
+
+    @entries = sanitize_and_interleave( Feedzirra::Feed.fetch_and_parse(feed_urls) )
+
   end
     
 private
