@@ -38,6 +38,7 @@ group :development, :test do
   gem 'cucumber-rails', ">= 0.3.2"
   gem 'webrat'
   gem "database_cleaner", ">= 0.5.0"
+  gem 'jasmine'
   gem 'sqlite3'
   gem 'pry'
 end

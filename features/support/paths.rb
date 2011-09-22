@@ -16,8 +16,8 @@ module NavigationHelpers
     #
     #   when /^(.*)'s profile page$/i
     #     user_profile_path(User.find_by_login($1))
-  when /^the listing of blog entries$/
-    "/blog_feeds"
+    when /^the listing of blog entries$/
+      "/blog_feeds"
 
     else
       begin
