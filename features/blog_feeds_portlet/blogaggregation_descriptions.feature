@@ -5,6 +5,6 @@ Feature: Blog Aggregation Description
   I want to aggregate their blog feeds
 
   Scenario: Blog aggregation
-    Given the blog feeds of the engineers
+    Given a collection of blog feeds
     When I go to the listing of blog entries
-    Then I should see the interleaved blog entries of the feeds displayed in reverse chronological order
+    Then I should see the aggregated blog entries 

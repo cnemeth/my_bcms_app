@@ -13,7 +13,6 @@ class BlogFeedsPortlet < Portlet
   ]  
 
   def render
-    # Your Code Goes Here
     @entries = sanitize_and_interleave( Feedzirra::Feed.fetch_and_parse(FEED_URLS) )
   end
     
